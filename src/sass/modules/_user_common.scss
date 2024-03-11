@@ -1,0 +1,236 @@
+@use "../variables/colors" as *;
+@use "./framework";
+
+//
+//
+header{
+    .navbar{
+        .li-settings{
+            background-color: rgba(121, 120, 120, 0) !important;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            .settings{
+                background-image: url("../../images/Settings.png");
+                background-size: 100% 100%;
+                margin: 0px 10px;
+                padding: 13px 16px;
+            }
+            .dropdown-contents{
+                position: absolute;
+                z-index: 2 !important;
+                width: max-content;
+                top: 46px;
+                background-color: #f9f4f4;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                display: none;
+                border: solid 1px;
+                border-top: 0px;
+                a{
+                    color: black !important;
+                    padding: 10px;
+                    margin: 0px;
+                }
+                a:hover{
+                    background-color: rgb(201 201 201);
+                }
+            }
+        }
+        .li-settings:hover{
+            .dropdown-contents{
+                display: block;
+            }
+        }
+    }
+}
+//
+//
+.dialog{
+    // display: flex;
+    // // gap: 54px;
+    // flex-direction: column;
+    // padding: 40px;
+    padding: 0px;
+    .x-icon-div{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 8px;
+        right: 9px;
+        cursor: pointer;
+        svg{
+            width: 25px;
+            height: fit-content;
+        }
+    }
+    
+    .divs-in-dialog1 ,.divs-in-dialog2{
+        display: flex;
+        gap: 54px;
+        flex-direction: column;
+        padding: 42px;
+        .text-and-btn{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+            .txt{
+                font-size: var(--font4)!important;
+                height: 36px;
+                background-color: #E5E5E5;
+            }
+            .btn{
+                font-size: var(--font5);
+                background-color: $blue;
+                height: 42px;
+                color: white;
+            }
+            a{
+                text-decoration: underline;
+                color: $blue;
+                font-size: var(--font5);
+            }
+        }
+        .update-password-link{
+            justify-content: unset !important;
+            cursor: pointer;
+        }
+        .password-part{
+            .txt, .btn{
+                width: 422.5px;
+
+            }
+        }
+    }
+    .divs-in-dialog2{
+        display: none;
+    }
+}
+dialog::backdrop{
+    background-color: rgb(121, 120, 120,0.5);
+}
+//
+//
+// .dialog2{
+//     .book_room_form{
+//         margin: 5px 0px !important;
+//         .x-icon-div{
+//             display: flex;
+//             justify-content: flex-end;
+//             position: absolute;
+//             top: 8px;
+//       height: fit-content;
+//             }         right: 9px;
+//             cursor: pointer;
+//             svg{
+//                 width: 25px;
+//              
+//         }
+//     }
+// }
+
+.dialog2{
+    @media screen and (min-width: 993px){
+        height: 90%;
+        width: 50%;
+    }
+    @media screen and (max-width: 992px){
+        width: 90%;
+    }
+    @media screen and (max-width: 600px){
+        width: 85%;
+        height: 90%;
+        .d-flex-row{
+            flex-direction: column;
+        }
+        .first-div-in-form{
+            flex-direction: row !important;
+            justify-content: space-between;
+            select, button{
+                width: 48%;
+            }
+        }
+        .div_spacing{
+            margin: unset;
+            gap: 0%;
+        }
+        .d-flex-column{
+            margin: 20px 0px;
+        }
+        .div-creditcard-and-kaza{
+            margin-bottom: 0px !important;
+        }
+        .div-expiration-and-kaza{
+            justify-content: unset;
+            align-items: unset;
+            margin-top: 0px !important;
+            .div-icons{
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        .conditions{
+            flex-direction: row;
+        }
+    }
+
+    /* margin-top: 28px; */
+    /* margin-bottom: 62px; */
+    .x-icon-div{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 8px;
+        right: 9px;
+        cursor: pointer;
+        svg{
+            width: 25px;
+            height: fit-content;
+        }
+    }
+    .book_room_form{
+        .div-expiration-and-kaza{
+            justify-content: unset;
+        }
+        .txt1{
+            font-size: var(--font2) !important;
+        }
+        
+        .txt3{
+            font-size: var(--font5) !important;
+        }
+        .div_spacing{
+            margin: 20px 0px;
+            display: flex;
+            gap: 5%;
+        }
+        .mastercard{
+            width: 50px;
+            height: 31px;
+            background-image: url("../../images/mastercard.svg");
+            background-size: 100% 100%;
+        }
+        .conditions{
+            gap: 1%;
+        }
+        .d-flex-column{
+            gap: 14px;
+        }
+    }
+    .txt2{
+        font-size: var(--font4) !important;
+    }
+    input, select, .btn{
+        font-size: var(--font5) !important;
+    }
+    .btn{
+        background-color: $blue;
+        color: white;
+        cursor: pointer;
+    }
+    .div-icons{
+        gap: 5px;
+    }
+}

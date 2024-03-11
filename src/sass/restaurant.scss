@@ -1,0 +1,45 @@
+@use "./variables/colors" as *;
+@use "./variables/fonts";
+@use "./modules/global";
+@use "./modules/navbar";
+@use "./modules/description-page";
+@use "./modules/footer";
+@use "./modules/options_in_main";
+
+header {
+  .navbar {
+    .opt2 {
+      border-bottom: 4px solid #0176ff;
+      border-top: 4px solid rgb(121, 120, 120, 0);
+      padding-bottom: 1px;
+    }
+    li:hover {
+      .opt2 {
+        border-top: 4px solid #6a6a6a;
+      }
+    }
+  }
+}
+
+main {
+  .section1,
+  .section3 {
+    background-color: #f9d18e;
+  }
+  .section1 {
+    .image1 {
+      background-image: url("../../images/restaurants/restaurant1_photo.png");
+    }
+  }
+  .section2 {
+    flex-direction: row-reverse;
+    .image1 {
+      background-image: url("../../images/restaurants/restaurant2_photo.png");
+    }
+  }
+  .section3 {
+    .image1 {
+      background-image: url("../../images/restaurants/restaurant3_photo.png");
+    }
+  }
+}

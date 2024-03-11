@@ -1,0 +1,57 @@
+@use "./variables/colors" as *;
+@use "./variables/fonts";
+@use "./modules/global";
+@use "./modules/navbar";
+@use "./modules/description-page";
+@use "./modules/options_in_main";
+@use "./modules/footer";
+
+header{
+    //jebto mn l description page
+    .navbar{
+        .opt3{
+            border-bottom: 4px solid #0176ff;
+            border-top: 4px solid rgb(121,120,120,0);
+            padding-bottom: 1px;
+        }
+        li:hover{
+            .opt3{
+                border-top: 4px solid #6a6a6a;
+            }
+        }
+    }
+}
+
+main{
+    //3meltela include mn _options_in_main.scss
+
+    .section1 , .section3 , .section5{
+        background-color: #F9D18E;
+    }
+    .section1{
+        .image1{
+            background-image: url("../../images/luxary/gym_photo.png");
+        }
+    }
+    .section2{
+        flex-direction: row-reverse;
+        .image1{
+            background-image: url("../../images/luxary/pool_photo.png");
+        }
+    }
+    .section3{
+        .image1{
+            background-image: url("../../images/luxary/Basketball_photo.png");
+        }
+    }
+    .section4{
+        .image1{
+            background-image: url("../../images/luxary/football_photo.png");
+        }
+    }
+    .section5{
+        .image1{
+            background-image: url("../../images/luxary/tennis_photo.png");
+        }
+    }
+}

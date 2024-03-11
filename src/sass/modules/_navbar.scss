@@ -1,0 +1,173 @@
+@use "../variables/colors" as *;
+@use "../variables/fonts";
+
+
+header{
+    .navbar{
+        overflow: hidden;
+        background-color: rgb(121,120,120);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 46px;
+        // position: absolute;
+        // top: 0px;
+        //
+        @media screen and (max-width: 991px){
+            height: 60px !important;
+        }
+        @media screen and (max-width: 980px){
+            .hamburger-icon{
+                margin-right: 14px;
+                display: block !important;
+            }
+            .menu{
+                display: none !important;
+            }
+        }
+        //
+        a{
+            text-decoration: none;
+            display: block;
+            /* padding: 13px 16px; */
+            margin-right: 16px;
+            margin-left: 16px;
+            /* border-bottom: 1px solid blue; */
+            text-decoration: none;
+            color: white;
+        }
+        .logo{
+            font-family: Goudy Stout, sans-serif;
+            font-size: 0.9rem;
+            margin: 0px;
+            display: inline-block;
+        }
+        .menu{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            margin-right: 6px;
+            height: 100%;
+            li{
+                /* height: 100%; */
+                /* align-items: baseline; */
+                display: flex;
+                align-items: center;
+                height: 100%;
+                cursor: pointer;
+    
+            }
+            li:hover{
+                background-color: #6a6a6a;
+            }
+            li:last-child:hover{
+                background-color: rgb(121,120,120,0); // opacity/alfa = 0 ya3ne ma bebayen llon
+            }
+            .book_btn{
+                background-color: $blue;
+                border-radius: 32px;
+                border-width: 0px;
+                padding: 10px;
+                color: white;
+                cursor: pointer;
+                a{
+                    padding: 0px 0px !important;
+                    margin: 0px;
+                }
+            }
+            // .settings :hover{
+
+            // }
+        }
+        .hamburger-icon{
+            margin-right: 14px;
+            display: none;
+        }
+        //
+        //
+        //
+        //
+        //////////////////////////////////// hode yalle defton
+        a{
+            //padding: 13px 16px;
+        }
+    }
+}
+
+.div_ofsidebar{
+    position: fixed;
+    top: 0px;
+    display: none;
+    z-index: 4;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    @media screen and (max-width: 991px){
+        a{
+            font-size: 40px !important;
+        }
+    }
+    @media screen and (max-width: 600px){
+        a{
+            font-size: 28px !important;
+        }
+        .sidebar{
+            width: 80% !important;
+        }
+    }
+
+    .before_sidebar{
+        width: 35%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        background-color: #1E1E1E;
+        opacity: 65%;
+    }
+    .sidebar{
+        background-color: #797878;
+        width: 65%;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        .x-icon{
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px 16px;
+        }
+        .sidebar_menu{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            li{
+                width: 100%;
+                align-items: baseline;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                a{
+                    width: inherit;
+                    font-size: x-large;
+                    text-decoration: none;
+                    display: block;
+                    padding: 13px 16px;
+                    color: white;
+                }
+            }
+            li:hover{
+                background-color: #6a6a6a;
+                //#6a6a6a
+            }
+        }
+        
+    }
+}

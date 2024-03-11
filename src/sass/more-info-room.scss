@@ -1,0 +1,106 @@
+@use "./variables/colors" as *;
+@use "./variables/fonts";
+@use "./modules/global";
+@use "./modules/navbar";
+@use "./modules/description-page";
+@use "./modules/footer";
+
+header{
+    // background-image: url("../../images/hotel_img1.png");
+    background-size: 100% 100%;
+    transition: background-image 1s;
+    height: 85vh !important;
+    .navbar{
+        background-color: rgb(121,120,120,0.8);
+        .opt1{
+            border-bottom: 4px solid #0176ff;
+            /* margin-top: 1px; */
+            /* margin-bottom: unset; */
+            border-top: 4px solid rgb(121,120,120,0);
+            padding-bottom: 1px;
+        }
+        li:hover{
+            .opt1{
+                border-top: 4px solid #6a6a6a;
+            }
+        }
+    }
+    
+    .circles_group{
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        bottom: 15%;
+        left: 0px;
+        right: 0px;
+        svg{
+            padding: 10px;
+            padding-bottom: 20px;
+            .circle{
+                cursor: pointer;
+            }
+        }
+    }
+}
+.advantages_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px;
+
+    ////////////////////////////////////////////////////////////media queries
+    ////
+    ////////////////////////////////////////// 900px
+    @media screen and (max-width: 992px){
+        .room_advantages{
+            width: 96% !important;
+            ul{
+                column-gap: 2% !important;
+                margin-left: 3%;
+                justify-content: unset !important;
+                font-size: var(--font4) !important;
+            }
+        }
+    }
+    ////////////////////////////////////////////////
+    ///
+    ///
+    ////////////////////////////////////////// 600px
+    @media screen and (max-width: 992px){
+        .room_advantages{
+            .title{
+                font-size: var(--font4) !important;
+                margin-top: 30px !important;
+            }
+            ul{
+                font-size: var(--font5) !important;
+                margin-bottom: 30px !important;
+                column-gap: 2% !important;
+                margin-left: 0px !important;
+            }
+        }
+    }
+    ////////////////////////////////////////////////
+    //// 
+    /////////////////////////////////////////////////////////////////////////
+    .room_advantages{
+        background-color: $section_color;
+        width: 80%;
+        .title{
+            font-size: var(--font2);
+            margin-left: 3%;
+            // margin-top: 45px;
+        }
+        ul{
+            font-size: var(--font3);
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            column-gap: 30%;
+            row-gap: 26px;
+            margin-bottom: 45px;
+        }
+    }
+}

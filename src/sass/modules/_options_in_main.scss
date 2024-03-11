@@ -1,0 +1,100 @@
+
+main{
+    ///////////////////////////////////////////////////////////media queries
+    ///
+    //////////////////////////////////////// 992px
+    @media screen and (max-width: 992px) {
+        .section{
+            flex-direction: column !important;
+            justify-content: center!important;
+            gap: 60px !important;
+            height: unset;
+            padding: 55px 0px;
+            .texts{
+                width: 85% !important;
+                height: 43% !important;
+                justify-content: flex-start !important;
+                gap: 34px !important;
+                .btns-div{
+                    display: flex;
+                    gap: 18px;
+                }
+            }
+            .image1{
+                width: 85% !important;
+                height: 45vh !important;
+            }
+        }
+    }
+    //////////////////////////////////////////////
+    /// 
+    ///
+    //////////////////////////////////////// 600px
+    @media screen and (max-width: 600px) {
+        .section{
+            .texts{
+                .body_txt{
+                    font-size: var(--font3) !important;
+                }
+            }
+        }
+    }
+    //////////////////////////////////////////////
+    /// 
+    /// 
+    //////////////////////////////////////// 390px
+    @media screen and (max-width: 390px) {
+        .section{
+            .texts{
+                gap: 28px !important;
+            }
+        }
+    }
+    //////////////////////////////////////////////
+    ///
+    //////////////////////////////////////////////////////////////////////
+    //
+    //
+    .section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        flex-direction: row;
+        .texts{
+            width: 40%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 55px;
+            .title{
+                // font-size: var(--font1);
+                font-size: var(--font2);
+                font-weight: bold;
+                margin: 0px;
+            }
+            .body_txt{
+                font-size: var(--font3);
+                margin: 0px;
+            }
+            .btn{
+                padding: 5px;
+                background-color: #0176FF;
+                color: white;
+                font-size: var(--font5);
+                cursor: pointer;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                margin: 0px;
+            }
+        }
+        .image1{
+            background-size: 100% 100%;
+            width: 40%;
+            height: 70%;
+        }
+    }
+
+}

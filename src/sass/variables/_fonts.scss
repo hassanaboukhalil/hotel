@@ -1,0 +1,58 @@
+
+:root{
+    --font1: 52px; // big titles
+    --font2: 45px; // normal titles and paragraph that have big titles
+    --font3: 36px; // paragraph that have normal title
+    --font4: 25px; // btns that have big titles
+    --font5: 20px; // btns
+}
+
+
+//////////////////note this project is not responsive for devices less than 375 width
+
+@media screen and (max-width: 1200px){
+    :root{
+        --font1: 45px;
+        --font2: 38px;
+        --font3: 30px;
+        --font4: 20px;
+        --font5: 16px;
+    }
+}
+@media screen and (max-width: 992px){
+    :root{
+        --font1: 48px;
+        --font2: 44px;
+        --font3: 40px;
+        --font4: 34px;
+        --font5: 26px;
+    }
+}
+@media screen and (max-width: 600px){
+    :root{
+        --font1: 30px;
+        --font2: 28px;
+        --font3: 26px;
+        --font4: 22px;
+        --font5: 18px;
+    }
+}
+@media screen and (max-width: 420px){
+    :root{
+        --font1: 30px;
+        --font2: 28px;
+        --font3: 26px;
+        --font4: 22px;
+        --font5: 18px;
+    }
+}
+
+@media screen and (max-width: 390px){
+    :root{
+        --font1: 26px;
+        --font2: 24px;
+        --font3: 22px;
+        --font4: 18px;
+        --font5: 14px;
+    }
+}

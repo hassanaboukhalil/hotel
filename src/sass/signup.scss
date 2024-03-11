@@ -1,0 +1,150 @@
+@use "./variables/colors" as *;
+@use "./variables/fonts";
+@use "./modules/global";
+@use "./modules/navbar";
+@use "./modules/footer";
+
+
+header{
+    //////////////////////////////////////////////////////////////////////media queries
+    ////
+    //////////////////////// 992px
+    @media screen and (max-width :992px) {
+        height: unset !important;
+        .signin_and_photo{
+            flex-direction: column !important;
+            .signin-form{
+                width: 100% !important;
+                height: 60vh !important;
+            }
+            .image{
+                width: 92% !important;
+                height: 70vh !important;
+                margin-bottom: 4% !important;
+            }
+        }
+    }
+    /////////////////////////////
+    ///
+    /// 
+    //////////////////////// 600px
+    @media screen and (max-width :600px) {
+        .signin_and_photo{
+            .signin-form{
+                height: 80vh !important;
+            }
+        }
+        .txts_input, .btn1, .btn-and-googleicon{
+            width: 85% !important;
+        }
+    }
+    //////////////////////////////
+    ///
+    /// 
+    //////////////////////// 420px
+    @media screen and (max-width :420px) {
+        .signin_and_photo{
+            .signin-form{
+                height: 70vh !important;
+            }
+        }
+    }
+    //////////////////////////////
+    ////
+    //////////////////////////////////////////////////////////////////////////////////
+    //
+    //
+    //
+    //
+    background-color: $section_color;
+    .navbar{
+        .opt5{
+            border-bottom: 4px solid #0176ff;
+            border-top: 4px solid rgb(121,120,120,0);
+            padding-bottom: 1px;
+        }
+        li:hover{
+            .opt5{
+                border-top: 4px solid #6a6a6a;
+            }
+        }
+    }
+    //
+    .signin_and_photo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        //
+        .signin-form{
+            font-size: var(--font2);
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            p{
+                margin: 0px;
+            }
+            label, a{
+                font-size: var(--font4) !important;
+            }
+            a{
+                color: $blue;
+                font-weight: bold;
+            }
+            .title{
+                font-size: var(--font2) !important;
+                font-weight: bold;
+            }
+            .txts_input{
+                width: 73%;
+                padding: 9px;
+                font-size: var(--font4) !important;
+                box-sizing: border-box;
+            }
+            .btn1{
+                font-size: var(--font4) !important;
+                width: 73%;
+                padding: 9px;
+                background-color: #0176FF;
+                color: white;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            // .btn2{
+            //     background-color: white;
+            //     color: black;
+            // }
+            .btn-and-googleicon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 73%;
+                background-color: white;
+                border: 1px solid;
+                padding: 9px;
+                gap: 4%;
+                box-sizing: border-box;
+                cursor: pointer;
+                font-size: var(--font4) !important;
+                //
+                .googleicon{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .image{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('../../images/hotel_image.png');
+            background-size: 100% 100%;
+        }
+    }
+}
